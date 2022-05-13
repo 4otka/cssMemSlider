@@ -1,0 +1,117 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background: linear-gradient(90deg, #effaff 0%, #d9e7ff 100%);
+}
+.container {
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 5em;
+    text-transform: uppercase;
+    background: linear-gradient(45deg, #09009f, #00ff95 80%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-align: center;
+}
+.slider {
+    width: 100%;
+    padding: 2%;
+    background-color: cadetblue;
+    border-radius: 0.7em;
+}
+
+img {
+    width: 100%;
+    border-radius: 0.7em;
+    transition: 500ms;
+}
+
+p {
+    color: black;
+    font-size: 1.3em;
+}
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.content div{
+    margin-top: 0.5em;
+}
+
+.slider-dots-item {
+    display: inline-block;
+    position: relative;
+    height: 0.75em;
+    width: 0.75em;
+    background-color: aqua;
+    border-radius: 50%;
+    margin: 0.5em;
+    cursor: pointer;
+    border: 2px solid aqua;
+    transition: 0.2s ease-in-out;
+}
+.slider-dots-item::before{
+    position:absolute;
+    content:'';
+    top: 0.5em;
+    right:-0.5em;
+    left:-0.5em;
+    bottom:-0.5em;
+}
+.slider-dots-item:hover {
+    background-color: rgba(236, 246, 234, 0.983);
+    border: 2px solid rgba(236, 246, 234, 0.983);
+    transition: 0.2s ease-in-out;
+}
+span {
+    color: transparent;
+}
+.active {
+    background-color: coral;
+    transition: 0.2s ease-in-out;
+}
+
+@media screen and (max-width: 1030px) {
+    h1 {
+        font-size: 2em;
+    }
+    .content {
+        flex-direction: column-reverse;
+    }
+
+    .content #mem {
+        align-items: flex-start;
+    }
+    .content-text {
+        display: flex;
+        width: 100%;
+    }
+}
+
+@keyframes rotateY1 {
+    0% {
+        transform: rotateY(-180deg);
+    }
+    40% {
+        transform: rotateY(-180deg);
+    }    
+    50% {
+        transform: rotateY(0);
+    }
+    90% {
+        transform: rotateY(0);
+    }    
+    100% {
+        transform: rotateY(180deg);
+    } 
+}
